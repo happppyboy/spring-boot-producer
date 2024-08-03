@@ -2,3 +2,10 @@ server:
   port: 8080
   servlet:
     context-path: /cloudaa
+
+cloudaa:
+  kafka:
+    producer:
+      bootstrap-servers-config: BROKER-VM1-IP,BROKER-VM2-IP,BROKER-VM3-IP
+      key-serializer-class-config: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer-class-config: org.springframework.kafka.support.serializer.JsonSerializer
